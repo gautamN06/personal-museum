@@ -19,6 +19,7 @@ class BookResponse(BaseModel):
 
 class FigureCreate(BaseModel):
     name: str 
+    religion: str | None = None 
     description: str | None = None 
     personal_notes: str | None = None 
 
