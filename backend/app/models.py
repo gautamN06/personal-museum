@@ -19,7 +19,7 @@ class Figure(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(200))
-    religion: Mapped[str] = mapped_column(String(200))
+    religion: Mapped[str | None] = mapped_column(String(200))
     description: Mapped[str | None] = mapped_column(Text, nullable=True)
     personal_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
 
