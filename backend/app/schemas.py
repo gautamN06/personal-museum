@@ -17,3 +17,6 @@ class BookResponse(BaseModel):
     personal_notes: str | None 
 
 
+class FigureCreate(BaseModel):
+    name: str 
+    

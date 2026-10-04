@@ -5,6 +5,7 @@ from sqlalchemy import text
 
 from app.db import Base, engine
 from app.models import Book
+from app.routers import books 
 
 
 @asynccontextmanager
@@ -15,6 +16,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+app.include_router(books.router)
 
 @app.get("/")
 def root():
